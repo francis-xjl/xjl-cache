@@ -1,0 +1,4 @@
+version "${xjlCacheVersion}"
+dependencies {
+    implementation "org.springframework:spring-context:${springContextVersion}"
+}

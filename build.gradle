@@ -1,0 +1,43 @@
+buildscript {
+    ext {
+        springBootVersion = "2.3.12.RELEASE"
+        lombokVersion = "1.18.20"
+        xjlCacheVersion = '1.0.0-SNAPSHOT'
+        springContextVersion = "5.2.15.RELEASE"
+    }
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+apply plugin: 'java-library'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+group 'cn.xiajl'
+version "${xjlCacheVersion}"
+
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    }
+}

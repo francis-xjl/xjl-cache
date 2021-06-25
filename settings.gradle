@@ -1,0 +1,8 @@
+rootProject.name = 'xjl-cache'
+
+include 'xjl-cache-core'
+include 'xjl-cache-provider:xjl-cache-provider-caffeine'
+include 'xjl-cache-provider:xjl-cache-provider-disk'
+include 'xjl-cache-provider:xjl-cache-provider-redis'
+include 'xjl-cache-spring:xjl-cache-autoconfigure'
+include 'xjl-cache-spring:xjl-cache-starter-redis'
